@@ -242,8 +242,10 @@ Expected result: **60 passed**.
 python scripts/generate_architecture.py
 ```
 
-This writes `assets/architecture.png` at 200 DPI using Matplotlib. Edit the script to change labels
-or colors.
+This writes `assets/architecture.png` at 200 DPI using Matplotlib. The generator checks for
+text/card overflow, label collisions, clipped PNG margins, and transparent pixels before saving;
+it fails with a detailed report if any check does not pass. Edit the script to change labels or
+colors.
 
 ---
 
